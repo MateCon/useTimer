@@ -2,6 +2,30 @@
 
 A simple timer hook for react.
 
+## Example
+
+[Preview](https://csb-xplgw.netlify.app/)
+
+        const App = () => {
+          const timer = useTimer(1);
+
+          return (
+            <div className="App">
+              <h1>useTimer</h1>
+              <p>A simple timer hook for React</p>
+              <>
+                <p className="timer">{timer.getTimeFormatted(2)}</p>
+                {timer.isRunning ? (
+                  <button onClick={timer.stop}>Stop</button>
+                ) : (
+                  <button onClick={timer.resume}>Resume</button>
+                )}
+                <button onClick={timer.restart}>Restart</button>
+              </>
+            </div>
+          );
+        };
+
 ## Settings
 
 | key      | type   | description                                              |

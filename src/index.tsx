@@ -3,7 +3,7 @@ import useTimer from "./useTimer";
 import "./styles.css";
 
 const App = () => {
-  const timer = useTimer(1);
+  const timer = useTimer(1, false, 10000);
 
   return (
     <div className="App">
